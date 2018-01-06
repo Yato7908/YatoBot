@@ -262,7 +262,7 @@ client.on('message', message => {
         message.reply('Ugh..You should say something better.');
   } else
 	  
-   if (message.content.startsWith(prefix + 'h')) {
+   if (message.content.startsWith(prefix + 'senpaiplshelp')) {
         message.reply(`Here are its features:
 :regional_indicator_g: :regional_indicator_e: :regional_indicator_n: :regional_indicator_e: :regional_indicator_r: :regional_indicator_a: :regional_indicator_l: 
 :small_blue_diamond: Use "+" and say something to Yato! He will respond to certain messages - Try to find them all!
