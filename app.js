@@ -261,6 +261,31 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + 'Bad')) {
         message.reply('Ugh..You should say something better.');
   } else
+	  
+   if (message.content.startsWith(prefix + 'h')) {
+        message.reply(`Here are its features:
+:regional_indicator_g: :regional_indicator_e: :regional_indicator_n: :regional_indicator_e: :regional_indicator_r: :regional_indicator_a: :regional_indicator_l: 
+:small_blue_diamond: Use "+" and say something to Yato! He will respond to certain messages - Try to find them all!
+:small_blue_diamond: Use "+say" And Yato shall repeat!
+:regional_indicator_m: :regional_indicator_u: :regional_indicator_s: :regional_indicator_i: :regional_indicator_c: 
+:small_blue_diamond: Use "+play (Put the name of your song here)" so that Yato can play songs in the music room!
+:small_blue_diamond: Use "+stop" to stop (duh)
+:small_blue_diamond: Use "+skip" to skip a song from the queue.
+:small_blue_diamond: Use "+queue" to see the queue.
+:small_blue_diamond: Lazy? Just use "+play" to choose from a list of hot songs!
+:regional_indicator_m: :regional_indicator_o: :regional_indicator_d: :regional_indicator_s: 
+:small_blue_diamond: "+kick"
+:small_blue_diamond: "+ban"
+:small_blue_diamond: "+guildCreate"
+:small_blue_diamond: "+guildDelete"
+:small_blue_diamond: "+purge"
+
+:regional_indicator_a: :regional_indicator_d: :regional_indicator_d:     :regional_indicator_y: :regional_indicator_a: :regional_indicator_t: :regional_indicator_o: 
+<https://discordapp.com/oauth2/authorize?client_id=397858349754089494&scope=bot&permissions=66186303>
+
+Join our Server if you're not already in it!
+https://discord.gg/UuJehU5`);
+  } else
 
     if (message.content.startsWith(prefix + 'lol')) {
         message.reply('How do you expect me to reply to that? Immma bot, not an actual human.' );
