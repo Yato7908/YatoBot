@@ -73,7 +73,7 @@ client.on("message", async message => {
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
     // Please read on Array.some() to understand this bit:
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
-    if(!message.member.roles.some(r=>["Owner-san", "Meddling Mods", "Mods", "Admin", "Moderators"].includes(r.name)) )
+    if(!message.member.roles.some(r=>["Owner-san", "Meddling Mods", "Mods", "Admin", "Moderators", "Protector of the Apples"].includes(r.name)) )
       return message.reply("Bitch! You ain't got enough powah to do that shit!");
 
     // Let's first check if we have a member and if we can kick them!
@@ -196,6 +196,10 @@ client.on('message', message => {
 
     if (message.content.startsWith(prefix + 'YATO')) {
        message.reply(`YES??`);
+  } else
+	  
+   if (message.content.startsWith(prefix + 'creator')) {
+        message.reply(`I was created by @Lee Min Ho#9443 - He has many names: Yato, NinjaBot, etc. The man is a born legend.  `);
   } else
 
     if (message.content.startsWith(prefix + 'wot')) {
