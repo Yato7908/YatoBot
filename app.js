@@ -73,7 +73,7 @@ client.on("message", async message => {
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
     // Please read on Array.some() to understand this bit:
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
-    if(!message.member.roles.some(r=>["Owner-san", "Meddling Mods", "Mods", "Admin", "Moderators", "Protector of the Apples"].includes(r.name)) )
+    if(!message.member.roles.some(r=>["Owner-san", "Meddling Mods"].includes(r.name)) )
       return message.reply("Bitch! You ain't got enough powah to do that shit!");
 
     // Let's first check if we have a member and if we can kick them!
@@ -99,7 +99,7 @@ client.on("message", async message => {
   if(command === "ban") {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
-    if(!message.member.roles.some(r=>["Owner-san", "Owner", "Admin"].includes(r.name)) )
+    if(!message.member.roles.some(r=>["Owner-san"].includes(r.name)) )
       return message.reply("You can't slam that ban hammer on ass if you don't have the power!");
 
     let member = message.mentions.members.first();
@@ -197,10 +197,6 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + 'YATO')) {
        message.reply(`YES??`);
   } else
-	  
-   if (message.content.startsWith(prefix + 'creator')) {
-        message.reply(`I was created by @Lee Min Ho#9443 - He has many names: Yato, NinjaBot, etc. The man is a born legend.  `);
-  } else
 
     if (message.content.startsWith(prefix + 'wot')) {
         message.reply(`I ask myself that everyday...`);
@@ -265,8 +261,7 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + 'Bad')) {
         message.reply('Ugh..You should say something better.');
   } else
-	  
-  
+
     if (message.content.startsWith(prefix + 'lol')) {
         message.reply('How do you expect me to reply to that? Immma bot, not an actual human.' );
   } else
@@ -899,4 +894,3 @@ function play(guild, song) {
 }
 
 client.login(config.token);
-client.login(process.env.BOT_TOKEN);
